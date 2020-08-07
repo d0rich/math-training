@@ -13,7 +13,7 @@
         <form @submit.prevent="check()">
             <div class="pt-5 m-3">
                 {{sample+' = '}}
-                <input class="form-control-sm" v-model="answer" @input.prevent="typeAnswer()" >
+                <input type="number" class="form-control-sm" v-model="answer" @input.prevent="typeAnswer()" >
             </div>
             <button type="submit" class="btn btn-outline-success">Проверить</button>
         </form>
