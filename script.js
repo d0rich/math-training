@@ -1,5 +1,5 @@
 const randInt = function(max){
-    return Math.round(Math.random()*max)
+    return Math.floor(Math.random()*(max+1))
 }
 
 let app = new Vue({
@@ -29,8 +29,8 @@ let app = new Vue({
                 } },
             { action: ':', result(a, b){ return a/b },
                 create(){
-                    const a = randInt(30)
-                    const b = randInt(10)
+                    const a = randInt(29) + 1
+                    const b = randInt(9) + 1
                     const c = a*b
                     if (randInt(1) === 1) return { a: c, b: a }
                     else return { a: c, b: b }
